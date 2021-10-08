@@ -69,7 +69,6 @@ class MainActivity : AppCompatActivity() {
         }
         binding.faktoriyelButton.setOnClickListener {
             val yazi = binding.islemEditText.text.toString()
-            var eksiMi = false
             var sayi = ""
             yazi.forEach{
                 if (it == '+' || it == '-' ||it == '*' || it == '/'){
@@ -93,7 +92,6 @@ class MainActivity : AppCompatActivity() {
         }
         binding.karekokButton.setOnClickListener {
             val yazi = binding.islemEditText.text.toString()
-            var eksiMi = false
             var sayi = ""
             yazi.forEach{
                 if (it == '+' || it == '-' ||it == '*' || it == '/'){
@@ -113,7 +111,6 @@ class MainActivity : AppCompatActivity() {
         }
         binding.ussuIkiButton.setOnClickListener {
             val yazi = binding.islemEditText.text.toString()
-            var eksiMi = false
             var sayi = ""
             yazi.forEach{
                 if (it == '+' || it == '-' ||it == '*' || it == '/'){
@@ -132,7 +129,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         binding.backspaceButton.setOnClickListener {
-            if (binding.islemEditText.text.length >0){
+            if (binding.islemEditText.text.isNotEmpty()){
                 binding.islemEditText.text.delete(binding.islemEditText.text.length-1,binding.islemEditText.text.length)
             }
         }
